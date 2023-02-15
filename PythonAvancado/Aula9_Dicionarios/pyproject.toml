@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dicionarios"
+version = "0.1.0"
+description = "Aula 9 de Dicionários"
+authors = ["Athos"]
+license = "Free"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
