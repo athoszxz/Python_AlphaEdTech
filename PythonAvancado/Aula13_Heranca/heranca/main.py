@@ -1,5 +1,4 @@
 from typing import List
-import math
 
 
 class Polygon:
@@ -19,14 +18,20 @@ class Triangle(Polygon):
         if a + b <= c or a + c <= b or b + c <= a:
             raise ValueError('Invalid triangle sides')
         if a == b == c:
+            print("Triangle is equilateral")
             return (a ** 2 * 3 ** 0.5) / 4
+        elif (a == b and a != c) or (a == c and a != b) or (b == c and b != a):
+            print("Triangle is isosceles")
+            s = sum(self.sides)/2
+            return (s * (s - a) * (s - b) * (s - c)) ** 0.5
         else:
-            s = sum(self.sides)
-            return math.sqrt(s * (s - a) * (s - b) * (s - c))
+            print("Triangle is scalene")
+            s = sum(self.sides)/2
+            return (s * (s - a) * (s - b) * (s - c)) ** 0.5
 
 
 def main():
-    triangle = Triangle([5, 5, 7])
+    triangle = Triangle([5, 5, 5])
     print(triangle.display_sides())
     print(triangle.find_area())
 

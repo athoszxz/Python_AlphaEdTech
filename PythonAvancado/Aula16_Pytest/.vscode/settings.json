@@ -1,0 +1,8 @@
+{
+  "python.analysis.extraPaths": [
+    "./pytests/pytests"
+  ],
+  "python.pythonPath": ".pyenv/versions/3.12.0a4/bin/python",
+  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true
+}
