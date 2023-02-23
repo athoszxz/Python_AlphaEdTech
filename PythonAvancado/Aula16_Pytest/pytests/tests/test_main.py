@@ -12,10 +12,11 @@ class TestRickAndMorty:
         file_txt = character_file_write
         result = RickAndMorty().write_file(file_txt,
                                            character)
-        assert result == \
+        expected_result = \
             f"\n{character['name']} created! \n\n Path: {file_txt}\n"
+        assert result == expected_result
 
-    @pytest.mark.skip(reason="Testando mark.skip")
+    @pytest.mark.skip(reason="Test mark.skip")
     def test_fail(self) -> None:
         assert False
 
